@@ -16,6 +16,7 @@ const BlogPost = ({ data }) => {
 }
 
 export default BlogPost
+//bruh
 
 export const pageQuery = graphql`
   query blogPostQuery($slug: String!) {

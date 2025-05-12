@@ -2,12 +2,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
 
-
-import { Header } from './Header'; 
-
-
-
-
+import { Header } from "./Header"
 import "./layout.css"
 import { Gray } from "./themes/Gray"
 import { Main } from './Main'
@@ -34,7 +29,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={Gray} >
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Content>
-        <Main>{children}</Main>
+        <Main m={20}>{children}</Main>
         <Footer>
           © {new Date().getFullYear()} &middot; Built with
           {` `}
@@ -44,5 +39,4 @@ const Layout = ({ children }) => {
     </ThemeProvider>
   )
 }
-
-export default Layout
+export default Layout;
